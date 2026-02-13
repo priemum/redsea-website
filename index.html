@@ -7,6 +7,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+    .reviews-section.hidden-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reviews-section.hidden-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reviews-section .animate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.reviews-section.show .animate-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reviews-section.show .animate-item:nth-child(1) { transition-delay: 0.2s; }
+.reviews-section.show .animate-item:nth-child(2) { transition-delay: 0.4s; }
+.reviews-section.show .animate-item:nth-child(3) { transition-delay: 0.6s; }
+.reviews-section.show .animate-item:nth-child(4) { transition-delay: 0.8s; }
+
 /* Base hidden state */
 .hidden-section {
     opacity: 0;
@@ -281,26 +308,27 @@ footer {
     </div>
 </section>
 
-<section>
-    <h2>What Our Clients Say</h2>
+<section class="reviews-section hidden-section">
+    <h2 class="animate-item">What Our Clients Say</h2>
     <div class="reviews">
-        <div class="review-card">
+        <div class="review-card animate-item">
             <div class="stars">★★★★★</div>
             <p>"Very professional service. The driver was on time and the car was spotless. Highly recommended!"</p>
             <strong>- Anna, Germany</strong>
         </div>
-        <div class="review-card">
+        <div class="review-card animate-item">
             <div class="stars">★★★★★</div>
             <p>"Excellent airport transfer and great communication. I felt very safe during the trip."</p>
             <strong>- Mark, UK</strong>
         </div>
-        <div class="review-card">
+        <div class="review-card animate-item">
             <div class="stars">★★★★★</div>
             <p>"Booked both transfer and safari tour. Everything was perfectly organized."</p>
             <strong>- Sofia, Italy</strong>
         </div>
     </div>
 </section>
+
 <section class="social-section hidden-section">
     <h2 class="animate-item">Stay Connected</h2>
     <p class="animate-item">Book your ride or follow our latest tours</p>
@@ -338,8 +366,10 @@ document.querySelectorAll('.hidden-section').forEach(section => {
 });
 </script>
 
+
 </body>
 </html>
+
 
 
 
