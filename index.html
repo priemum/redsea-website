@@ -7,6 +7,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+/* Base hidden state */
+.fade-in, .slide-down, .slide-up {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Fade */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Slide Down */
+.slide-down {
+    transform: translateY(-20px);
+    animation: slideDown 0.8s ease forwards;
+}
+
+/* Slide Up */
+.slide-up {
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Delays */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+/* Keyframes */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 * {
     margin: 0;
@@ -180,6 +225,24 @@ footer {
 </style>
 </head>
 <body>
+<section class="social-section fade-in">
+    <h2 class="slide-down">Stay Connected</h2>
+    <p class="slide-down delay-1">Book your ride or follow our latest tours</p>
+
+    <div class="social-icons slide-up delay-2">
+        <a href="https://wa.me/201234567890" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/yourusername" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/yourpage" target="_blank" class="facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</section>
 
 <div class="hero">
     <div>
@@ -253,5 +316,6 @@ footer {
 
 </body>
 </html>
+
 
 
