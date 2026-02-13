@@ -4,118 +4,184 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Red Sea Transfers & Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f5f9fc;
-        color: #222;
-        text-align: center;
-    }
 
-    header {
-        background: linear-gradient(135deg, #0077b6, #00b4d8);
-        color: white;
-        padding: 60px 20px;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 36px;
-    }
+body {
+    background: #f4f8fb;
+    color: #222;
+}
 
-    header p {
-        margin-top: 15px;
-        font-size: 18px;
-    }
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
-    .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 14px 28px;
-        background: #25D366;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.hero h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
 
-    .btn:hover {
-        background: #1ebe5d;
-    }
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
 
-    section {
-        padding: 50px 20px;
-    }
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #00b4d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-    h2 {
-        color: #0077b6;
-        margin-bottom: 20px;
-    }
+.btn:hover {
+    background: #0077b6;
+}
 
-    .services {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-    .card {
-        background: white;
-        padding: 25px;
-        border-radius: 10px;
-        width: 280px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
+section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #0077b6;
+}
 
-    footer {
-        background: #023e8a;
-        color: white;
-        padding: 20px;
-        font-size: 14px;
-    }
+.services, .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
 
-    @media (max-width: 768px) {
-        .services {
-            flex-direction: column;
-            align-items: center;
-        }
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #023e8a;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.review-card strong {
+    font-size: 13px;
+    color: #555;
+}
+
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .services, .reviews {
+        flex-direction: column;
+        align-items: center;
     }
+}
+
 </style>
 </head>
 <body>
 
-<header>
-    <h1>Red Sea Transfers & Tours</h1>
-    <p>Private Airport Transfers & Tours in Hurghada</p>
-    <a class="btn" href="https://wa.me/201234567890" target="_blank">Book Now on WhatsApp</a>
-</header>
+<div class="hero">
+    <div>
+        <h1>Red Sea Transfers & Tours</h1>
+        <p>Private Airport Transfers & Premium Tours in Hurghada</p>
+        <a class="btn" href="https://wa.me/201234567890" target="_blank">Book Now on WhatsApp</a>
+    </div>
+</div>
 
 <section>
     <h2>Our Services</h2>
     <div class="services">
         <div class="card">
             <h3>Airport Transfers</h3>
-            <p>Hurghada Airport to hotels. On-time pickup, clean and comfortable cars.</p>
+            <p>On-time pickup from Hurghada Airport to any hotel with clean and comfortable cars.</p>
         </div>
         <div class="card">
             <h3>City Transfers</h3>
-            <p>Hurghada ⇄ Marsa Alam – Safaga – El Quseir.</p>
+            <p>Travel safely to Marsa Alam, Safaga, and El Quseir with professional service.</p>
         </div>
         <div class="card">
             <h3>Tours & Activities</h3>
-            <p>Orange Bay – Safari – City Tours. Best prices, no hidden fees.</p>
+            <p>Orange Bay, Safari Trips, City Tours and more at fair prices.</p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Why Choose Us?</h2>
-    <p>✔ Clean Cars<br>
-       ✔ Professional Service<br>
-       ✔ Fair Prices<br>
-       ✔ 24/7 Support</p>
+    <h2>What Our Clients Say</h2>
+    <div class="reviews">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very professional service. The driver was on time and the car was spotless. Highly recommended!"</p>
+            <strong>- Anna, Germany</strong>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent airport transfer and great communication. I felt very safe during the trip."</p>
+            <strong>- Mark, UK</strong>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Booked both transfer and safari tour. Everything was perfectly organized."</p>
+            <strong>- Sofia, Italy</strong>
+        </div>
+    </div>
 </section>
 
 <footer>
