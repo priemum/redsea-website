@@ -133,6 +133,49 @@ footer {
         align-items: center;
     }
 }
+.social-section {
+    background: #f8fbff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.social-section h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.social-section p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-6px);
+}
+
+.whatsapp { color: #25D366; }
+.instagram { color: #E1306C; }
+.facebook { color: #1877F2; }
 
 </style>
 </head>
@@ -145,24 +188,7 @@ footer {
         <a class="btn" href="https://wa.me/201234567890" target="_blank">Book Now on WhatsApp</a>
     </div>
 </div>
-<section style="background:#f4f8fb; padding:40px 20px;">
-    <h2 style="color:#0077b6; margin-bottom:25px;">Connect With Us</h2>
-    <div style="display:flex; justify-content:center; gap:25px; font-size:28px;">
-        
-        <a href="https://wa.me/201234567890" target="_blank" style="color:#25D366;">
-            <i class="fab fa-whatsapp"></i>
-        </a>
 
-        <a href="https://instagram.com/yourusername" target="_blank" style="color:#E1306C;">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://facebook.com/yourpage" target="_blank" style="color:#1877F2;">
-            <i class="fab fa-facebook"></i>
-        </a>
-
-    </div>
-</section>
 
 <section>
     <h2>Our Services</h2>
@@ -202,6 +228,24 @@ footer {
         </div>
     </div>
 </section>
+<section class="social-section">
+    <h2>Stay Connected</h2>
+    <p>Book your ride or follow our latest tours</p>
+
+    <div class="social-icons">
+        <a href="https://wa.me/201234567890" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/yourusername" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/yourpage" target="_blank" class="facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</section>
 
 <footer>
     © 2026 Red Sea Transfers & Tours – All Rights Reserved
@@ -209,4 +253,5 @@ footer {
 
 </body>
 </html>
+
 
